@@ -113,3 +113,6 @@ STATIC_URL = '/static/'
 
 LOGIN_REDIRECT_URL = '/'
 REGISTRATION_AUTO_LOGIN = True
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, '..', 'media')
