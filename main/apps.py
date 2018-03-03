@@ -4,5 +4,6 @@ from django.apps import AppConfig
 
 
 class MainConfig(AppConfig):
-	"""Configuration for main app of KovalAgent project."""
+    """Configuration for main app of KovalAgent project."""
+
     name = 'main'
