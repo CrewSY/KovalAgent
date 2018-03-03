@@ -1,0 +1,35 @@
+{% load i18n %}
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+   <link rel="stylesheet" href="{% static "css/base.css" %}">
+   {% block extra_css %}{% endblock %}
+
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="wrapper">   
+	<header>
+	 <div class="container">
+    <div class="row">
+      <div class="col-sm-2">logo</div>
+      <div class="col-sm-3 offset-sm-7">login</div>
+    </div> 
+   </div> 
+	</header>
+
+  {% block content %}
+  {% endblock %}
+
+  <footer class="footer" id="footer">
+    fdsfsdfsd
+  </footer>
+</div>
+{% block extra_js %}{% endblock %}
+</body>
+</html>
