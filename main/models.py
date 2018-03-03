@@ -14,8 +14,8 @@ class Equipment(models.Model):
         verbose_name_plural = u'Обладнаня'
 
     STATUS_CHOICES = (
-        ('hired', u'У прокаті'),
         ('in_stock', u'Доступний на складі'),
+        ('hired', u'У прокаті'),
         ('needs_repairs', u'Потребує ремонту'),
         ('under_repair', u'У ремонті',)
     )
