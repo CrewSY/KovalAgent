@@ -1,4 +1,4 @@
-""" Django settings for kovalagent project."""
+"""Django settings for kovalagent project."""
 
 import os
 
