@@ -100,5 +100,9 @@ ENV/
 # mypy
 .mypy_cache/
 
-# DB
+# sass
+.sass-cache/
+*.css.map
+
+# DB files
 db.sqlite3
