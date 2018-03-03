@@ -1,6 +1,7 @@
 aspy.yaml==1.0.0
 cached-property==1.4.0
 Django==1.11
+django-registration-redux==2.2
 identify==1.0.7
 nodeenv==1.2.0
 pre-commit==1.6.0
