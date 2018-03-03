@@ -14,16 +14,17 @@ class Equipment(models.Model):
         verbose_name_plural = u'Обладнаня'
 
     STATUS_CHOICES = (
-        ('Hired', u'У прокаті'),
-        ('In stock', u'Доступний на складі'),
-        ('Needs repairs', u'Потребує ремонту'),
-        ('Under repair', u'У ремонті',)
+        ('hired', u'У прокаті'),
+        ('in_stock', u'Доступний на складі'),
+        ('needs_repairs', u'Потребує ремонту'),
+        ('under_repair', u'У ремонті',)
     )
 
     status = models.CharField(verbose_name=u'Статус',
                               max_length=24,
                               choices=STATUS_CHOICES,
-                              default='Hired')
+                              blank=True,
+                              null=True)
     title = models.CharField(verbose_name='Заголовок',
                              blank=True,
                              max_length=64)
