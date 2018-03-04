@@ -6,6 +6,23 @@ from django.utils import timezone
 from django.contrib.auth.models import User
 
 
+class Status(models.Model):
+    """Model that represents status of equipment."""
+
+    name = models.CharField(verbose_name=u'Стан',
+                            max_length=48)
+
+    def __str__(self):
+        """Render the equipment status instance as a string."""
+        return self.name
+
+    class Meta:
+        """Meta data of equipment status."""
+
+        verbose_name = 'Стан обладнання'
+        verbose_name_plural = 'Стан обладнання'
+
+
 class Equipment(models.Model):
     """Model that represents equipment."""
 
@@ -15,19 +32,9 @@ class Equipment(models.Model):
         verbose_name = u'Обладнання'
         verbose_name_plural = u'Обладнання'
 
-    STATUS_CHOICES = (
-        ('in_stock', u'Доступний на складі'),
-        ('hired', u'У прокаті'),
-        ('needs_repairs', u'Потребує ремонту'),
-        ('under_repair', u'У ремонті',)
-    )
-
+    status = models.ForeignKey(Status,
+                               verbose_name=u'Стан')
     photo = models.ImageField(verbose_name=u'Фото',
-                              blank=True,
-                              null=True)
-    status = models.CharField(verbose_name=u'Статус',
-                              max_length=24,
-                              choices=STATUS_CHOICES,
                               blank=True,
                               null=True)
     title = models.CharField(verbose_name='Заголовок',
@@ -49,14 +56,14 @@ class EquipmentLog(models.Model):
         verbose_name = u'Дія з обладнанням'
         verbose_name_plural = u'Дії з обладнанням'
 
-    owner = models.OneToOneField(User,
-                                 verbose_name=u'Користувач')
+    owner = models.ForeignKey(User,
+                              verbose_name=u'Користувач')
     iteam = models.ForeignKey(Equipment,
                               verbose_name=u'Обладнання')
-    pre_status = models.CharField(verbose_name=u'Статус до',
-                                  max_length=24)
-    post_status = models.CharField(verbose_name=u'Статус після',
-                                   max_length=24)
+    pre_status = models.CharField(verbose_name=u'Стан до',
+                                  max_length=48)
+    post_status = models.CharField(verbose_name=u'Стан після',
+                                   max_length=48)
     date = models.DateTimeField(verbose_name=u'Дата',
                                 default=timezone.now)
 
