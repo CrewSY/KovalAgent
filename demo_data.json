@@ -3,220 +3,190 @@
     "model": "main.equipment",
     "pk": 1,
     "fields": {
+        "photo": "",
         "status": "in_stock",
         "title": "\u0422\u0435\u0441\u0442\u043e\u0432\u0435 \u043e\u0431\u043b\u0430\u0434\u043d\u0430\u043d\u043d\u044f \u21161",
-        "description": "\u0422\u0435\u0441\u0442\u043e\u0432\u0435 \u043e\u0431\u043b\u0430\u0434\u043d\u0430\u043d\u043d\u044f \u21161",
-        "created": "2018-03-03T19:02:27.538Z",
-        "updated": "2018-03-03T19:02:27.538Z"
+        "description": ""
     }
 },
 {
     "model": "main.equipment",
     "pk": 2,
     "fields": {
-        "status": "in_stock",
+        "photo": "",
+        "status": "hired",
         "title": "\u0422\u0435\u0441\u0442\u043e\u0432\u0435 \u043e\u0431\u043b\u0430\u0434\u043d\u0430\u043d\u043d\u044f \u21162",
-        "description": "\u0422\u0435\u0441\u0442\u043e\u0432\u0435 \u043e\u0431\u043b\u0430\u0434\u043d\u0430\u043d\u043d\u044f \u21162",
-        "created": "2018-03-03T19:02:33.534Z",
-        "updated": "2018-03-03T19:02:33.534Z"
+        "description": "\u0422\u0435\u0441\u0442\u043e\u0432\u0435 \u043e\u0431\u043b\u0430\u0434\u043d\u0430\u043d\u043d\u044f \u21162"
     }
 },
 {
     "model": "main.equipment",
     "pk": 3,
     "fields": {
-        "status": "hired",
+        "photo": "",
+        "status": "in_stock",
         "title": "\u0422\u0435\u0441\u0442\u043e\u0432\u0435 \u043e\u0431\u043b\u0430\u0434\u043d\u0430\u043d\u043d\u044f \u21163",
-        "description": "",
-        "created": "2018-03-03T19:02:36.990Z",
-        "updated": "2018-03-03T19:02:36.990Z"
+        "description": "\u0422\u0435\u0441\u0442\u043e\u0432\u0435 \u043e\u0431\u043b\u0430\u0434\u043d\u0430\u043d\u043d\u044f \u21163"
     }
 },
 {
     "model": "main.equipment",
     "pk": 4,
     "fields": {
-        "status": "hired",
+        "photo": "",
+        "status": "needs_repairs",
         "title": "\u0422\u0435\u0441\u0442\u043e\u0432\u0435 \u043e\u0431\u043b\u0430\u0434\u043d\u0430\u043d\u043d\u044f \u21164",
-        "description": "\u0422\u0435\u0441\u0442\u043e\u0432\u0435 \u043e\u0431\u043b\u0430\u0434\u043d\u0430\u043d\u043d\u044f \u21164",
-        "created": "2018-03-03T19:02:46.283Z",
-        "updated": "2018-03-03T19:02:46.283Z"
+        "description": "\u0422\u0435\u0441\u0442\u043e\u0432\u0435 \u043e\u0431\u043b\u0430\u0434\u043d\u0430\u043d\u043d\u044f \u21164"
     }
 },
 {
     "model": "main.equipment",
     "pk": 5,
     "fields": {
+        "photo": "",
         "status": "needs_repairs",
         "title": "\u0422\u0435\u0441\u0442\u043e\u0432\u0435 \u043e\u0431\u043b\u0430\u0434\u043d\u0430\u043d\u043d\u044f \u21165",
-        "description": "\u0422\u0435\u0441\u0442\u043e\u0432\u0435 \u043e\u0431\u043b\u0430\u0434\u043d\u0430\u043d\u043d\u044f \u21165",
-        "created": "2018-03-03T19:02:51.073Z",
-        "updated": "2018-03-03T19:02:51.073Z"
+        "description": "\u0422\u0435\u0441\u0442\u043e\u0432\u0435 \u043e\u0431\u043b\u0430\u0434\u043d\u0430\u043d\u043d\u044f \u21165"
     }
 },
 {
     "model": "main.equipment",
     "pk": 6,
     "fields": {
-        "status": "under_repair",
+        "photo": "",
+        "status": "needs_repairs",
         "title": "\u0422\u0435\u0441\u0442\u043e\u0432\u0435 \u043e\u0431\u043b\u0430\u0434\u043d\u0430\u043d\u043d\u044f \u21166",
-        "description": "\u0422\u0435\u0441\u0442\u043e\u0432\u0435 \u043e\u0431\u043b\u0430\u0434\u043d\u0430\u043d\u043d\u044f \u21166",
-        "created": "2018-03-03T19:02:57.350Z",
-        "updated": "2018-03-03T19:02:57.350Z"
+        "description": "\u0422\u0435\u0441\u0442\u043e\u0432\u0435 \u043e\u0431\u043b\u0430\u0434\u043d\u0430\u043d\u043d\u044f \u21166"
     }
 },
 {
     "model": "main.equipment",
     "pk": 7,
     "fields": {
-        "status": "under_repair",
+        "photo": "",
+        "status": "hired",
         "title": "\u0422\u0435\u0441\u0442\u043e\u0432\u0435 \u043e\u0431\u043b\u0430\u0434\u043d\u0430\u043d\u043d\u044f \u21167",
-        "description": "",
-        "created": "2018-03-03T19:03:06.262Z",
-        "updated": "2018-03-03T19:03:06.262Z"
+        "description": "\u0422\u0435\u0441\u0442\u043e\u0432\u0435 \u043e\u0431\u043b\u0430\u0434\u043d\u0430\u043d\u043d\u044f \u21167"
     }
 },
 {
     "model": "main.equipment",
     "pk": 8,
     "fields": {
+        "photo": "",
         "status": "in_stock",
         "title": "\u0422\u0435\u0441\u0442\u043e\u0432\u0435 \u043e\u0431\u043b\u0430\u0434\u043d\u0430\u043d\u043d\u044f \u21168",
-        "description": "\u0422\u0435\u0441\u0442\u043e\u0432\u0435 \u043e\u0431\u043b\u0430\u0434\u043d\u0430\u043d\u043d\u044f \u21168",
-        "created": "2018-03-03T19:03:14.742Z",
-        "updated": "2018-03-03T19:03:14.742Z"
+        "description": "\u0422\u0435\u0441\u0442\u043e\u0432\u0435 \u043e\u0431\u043b\u0430\u0434\u043d\u0430\u043d\u043d\u044f \u21168"
     }
 },
 {
     "model": "main.equipment",
     "pk": 9,
     "fields": {
-        "status": "in_stock",
+        "photo": "",
+        "status": "under_repair",
         "title": "\u0422\u0435\u0441\u0442\u043e\u0432\u0435 \u043e\u0431\u043b\u0430\u0434\u043d\u0430\u043d\u043d\u044f \u21169",
-        "description": "\u0422\u0435\u0441\u0442\u043e\u0432\u0435 \u043e\u0431\u043b\u0430\u0434\u043d\u0430\u043d\u043d\u044f \u21169",
-        "created": "2018-03-03T19:03:21.464Z",
-        "updated": "2018-03-03T19:03:21.464Z"
+        "description": "\u0422\u0435\u0441\u0442\u043e\u0432\u0435 \u043e\u0431\u043b\u0430\u0434\u043d\u0430\u043d\u043d\u044f \u21169"
     }
 },
 {
     "model": "main.equipment",
     "pk": 10,
     "fields": {
-        "status": "hired",
+        "photo": "",
+        "status": "in_stock",
         "title": "\u0422\u0435\u0441\u0442\u043e\u0432\u0435 \u043e\u0431\u043b\u0430\u0434\u043d\u0430\u043d\u043d\u044f \u211610",
-        "description": "\u0422\u0435\u0441\u0442\u043e\u0432\u0435 \u043e\u0431\u043b\u0430\u0434\u043d\u0430\u043d\u043d\u044f \u211610",
-        "created": "2018-03-03T19:03:29.223Z",
-        "updated": "2018-03-03T19:03:29.223Z"
+        "description": "\u0422\u0435\u0441\u0442\u043e\u0432\u0435 \u043e\u0431\u043b\u0430\u0434\u043d\u0430\u043d\u043d\u044f \u211610"
     }
 },
 {
     "model": "main.equipment",
     "pk": 11,
     "fields": {
+        "photo": "",
         "status": "hired",
-        "title": "\u0422\u0435\u0441\u0442\u043e\u0432\u0435 \u043e\u0431\u043b\u0430\u0434\u043d\u0430\u043d\u043d\u044f \u211611",
-        "description": "\u0422\u0435\u0441\u0442\u043e\u0432\u0435 \u043e\u0431\u043b\u0430\u0434\u043d\u0430\u043d\u043d\u044f \u211611",
-        "created": "2018-03-03T19:03:35.472Z",
-        "updated": "2018-03-03T19:03:35.472Z"
+        "title": "\u0422\u0435\u0441\u0442\u043e\u0432\u0435 \u043e\u0431\u043b\u0430\u0434\u043d\u0430\u043d\u043d\u044f \u211612",
+        "description": "\u0422\u0435\u0441\u0442\u043e\u0432\u0435 \u043e\u0431\u043b\u0430\u0434\u043d\u0430\u043d\u043d\u044f \u211612"
     }
 },
 {
     "model": "main.equipment",
     "pk": 12,
     "fields": {
+        "photo": "",
         "status": "in_stock",
-        "title": "\u0422\u0435\u0441\u0442\u043e\u0432\u0435 \u043e\u0431\u043b\u0430\u0434\u043d\u0430\u043d\u043d\u044f \u211612",
-        "description": "\u0422\u0435\u0441\u0442\u043e\u0432\u0435 \u043e\u0431\u043b\u0430\u0434\u043d\u0430\u043d\u043d\u044f \u211612",
-        "created": "2018-03-03T19:03:42.463Z",
-        "updated": "2018-03-03T19:03:42.463Z"
+        "title": "\u0422\u0435\u0441\u0442\u043e\u0432\u0435 \u043e\u0431\u043b\u0430\u0434\u043d\u0430\u043d\u043d\u044f \u211613",
+        "description": ""
     }
 },
 {
     "model": "main.equipment",
     "pk": 13,
     "fields": {
-        "status": "in_stock",
-        "title": "\u0422\u0435\u0441\u0442\u043e\u0432\u0435 \u043e\u0431\u043b\u0430\u0434\u043d\u0430\u043d\u043d\u044f \u211613",
-        "description": "\u0422\u0435\u0441\u0442\u043e\u0432\u0435 \u043e\u0431\u043b\u0430\u0434\u043d\u0430\u043d\u043d\u044f \u211613",
-        "created": "2018-03-03T19:03:47.472Z",
-        "updated": "2018-03-03T19:03:47.472Z"
+        "photo": "",
+        "status": "under_repair",
+        "title": "\u0422\u0435\u0441\u0442\u043e\u0432\u0435 \u043e\u0431\u043b\u0430\u0434\u043d\u0430\u043d\u043d\u044f \u211614",
+        "description": ""
     }
 },
 {
     "model": "main.equipment",
     "pk": 14,
     "fields": {
-        "status": "needs_repairs",
-        "title": "\u0422\u0435\u0441\u0442\u043e\u0432\u0435 \u043e\u0431\u043b\u0430\u0434\u043d\u0430\u043d\u043d\u044f \u211614",
-        "description": "",
-        "created": "2018-03-03T19:03:51.637Z",
-        "updated": "2018-03-03T19:03:51.637Z"
+        "photo": "",
+        "status": "hired",
+        "title": "\u0422\u0435\u0441\u0442\u043e\u0432\u0435 \u043e\u0431\u043b\u0430\u0434\u043d\u0430\u043d\u043d\u044f \u211615",
+        "description": "\u0422\u0435\u0441\u0442\u043e\u0432\u0435 \u043e\u0431\u043b\u0430\u0434\u043d\u0430\u043d\u043d\u044f \u211615"
     }
 },
 {
     "model": "main.equipment",
     "pk": 15,
     "fields": {
+        "photo": "",
         "status": "in_stock",
-        "title": "\u0422\u0435\u0441\u0442\u043e\u0432\u0435 \u043e\u0431\u043b\u0430\u0434\u043d\u0430\u043d\u043d\u044f \u211615",
-        "description": "",
-        "created": "2018-03-03T19:03:56.122Z",
-        "updated": "2018-03-03T19:03:56.122Z"
+        "title": "\u0422\u0435\u0441\u0442\u043e\u0432\u0435 \u043e\u0431\u043b\u0430\u0434\u043d\u0430\u043d\u043d\u044f \u211616",
+        "description": "\u0422\u0435\u0441\u0442\u043e\u0432\u0435 \u043e\u0431\u043b\u0430\u0434\u043d\u0430\u043d\u043d\u044f \u211616"
     }
 },
 {
     "model": "main.equipment",
     "pk": 16,
     "fields": {
-        "status": "hired",
-        "title": "\u0422\u0435\u0441\u0442\u043e\u0432\u0435 \u043e\u0431\u043b\u0430\u0434\u043d\u0430\u043d\u043d\u044f \u211616",
-        "description": "\u0422\u0435\u0441\u0442\u043e\u0432\u0435 \u043e\u0431\u043b\u0430\u0434\u043d\u0430\u043d\u043d\u044f \u211616",
-        "created": "2018-03-03T19:03:56.606Z",
-        "updated": "2018-03-03T19:04:09.360Z"
+        "photo": "",
+        "status": "under_repair",
+        "title": "\u0422\u0435\u0441\u0442\u043e\u0432\u0435 \u043e\u0431\u043b\u0430\u0434\u043d\u0430\u043d\u043d\u044f \u211617",
+        "description": "\u0422\u0435\u0441\u0442\u043e\u0432\u0435 \u043e\u0431\u043b\u0430\u0434\u043d\u0430\u043d\u043d\u044f \u211617"
     }
 },
 {
     "model": "main.equipment",
     "pk": 17,
     "fields": {
+        "photo": "",
         "status": "under_repair",
-        "title": "\u0422\u0435\u0441\u0442\u043e\u0432\u0435 \u043e\u0431\u043b\u0430\u0434\u043d\u0430\u043d\u043d\u044f \u211617",
-        "description": "\u0422\u0435\u0441\u0442\u043e\u0432\u0435 \u043e\u0431\u043b\u0430\u0434\u043d\u0430\u043d\u043d\u044f \u211617",
-        "created": "2018-03-03T19:04:17.270Z",
-        "updated": "2018-03-03T19:04:17.270Z"
+        "title": "\u0422\u0435\u0441\u0442\u043e\u0432\u0435 \u043e\u0431\u043b\u0430\u0434\u043d\u0430\u043d\u043d\u044f \u211618",
+        "description": "\u0422\u0435\u0441\u0442\u043e\u0432\u0435 \u043e\u0431\u043b\u0430\u0434\u043d\u0430\u043d\u043d\u044f \u211618"
     }
 },
 {
     "model": "main.equipment",
     "pk": 18,
     "fields": {
-        "status": "under_repair",
-        "title": "\u0422\u0435\u0441\u0442\u043e\u0432\u0435 \u043e\u0431\u043b\u0430\u0434\u043d\u0430\u043d\u043d\u044f \u211618",
-        "description": "\u0422\u0435\u0441\u0442\u043e\u0432\u0435 \u043e\u0431\u043b\u0430\u0434\u043d\u0430\u043d\u043d\u044f \u211618",
-        "created": "2018-03-03T19:04:26.162Z",
-        "updated": "2018-03-03T19:04:26.162Z"
+        "photo": "",
+        "status": "in_stock",
+        "title": "\u0422\u0435\u0441\u0442\u043e\u0432\u0435 \u043e\u0431\u043b\u0430\u0434\u043d\u0430\u043d\u043d\u044f \u211619",
+        "description": ""
     }
 },
 {
     "model": "main.equipment",
     "pk": 19,
     "fields": {
-        "status": "hired",
-        "title": "\u0422\u0435\u0441\u0442\u043e\u0432\u0435 \u043e\u0431\u043b\u0430\u0434\u043d\u0430\u043d\u043d\u044f \u211619",
-        "description": "",
-        "created": "2018-03-03T19:04:31.388Z",
-        "updated": "2018-03-03T19:04:31.388Z"
-    }
-},
-{
-    "model": "main.equipment",
-    "pk": 20,
-    "fields": {
-        "status": "in_stock",
+        "photo": "",
+        "status": "under_repair",
         "title": "\u0422\u0435\u0441\u0442\u043e\u0432\u0435 \u043e\u0431\u043b\u0430\u0434\u043d\u0430\u043d\u043d\u044f \u211620",
-        "description": "",
-        "created": "2018-03-03T19:04:40.673Z",
-        "updated": "2018-03-03T19:04:40.673Z"
+        "description": "\u0422\u0435\u0441\u0442\u043e\u0432\u0435 \u043e\u0431\u043b\u0430\u0434\u043d\u0430\u043d\u043d\u044f \u211620"
     }
 }
 ]
