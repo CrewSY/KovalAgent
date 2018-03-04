@@ -4,39 +4,48 @@
 {% load staticfiles %}
 
 {% block extra_css %}
-
-  <link rel="stylesheet" href="{% static "css/iteam_details.css" %}">
- {% endblock %}
+<link rel="stylesheet" href="{% static "css/iteam_details.css" %}">
+{% endblock %}
 
 {% block content %}
 	<section id="content">
 		<div class="container">
+
 			<div class="row">
+
 				<div class="col-md-5 col-lg-5">
-					<img class="photo-items" src="../../../kovalagent/../main/static/img/hmp10.jpg" alt="1111">
+					{% if pr.photo %}
+            <img src="{{ iteam.photo.url }}">
+          {% else %}
+                <img height="150" width="150" src="{% static "img/inventoryicon.png" %}">
+          {% endif %}
 				</div>
+
 				<div class="col-md-7 col-lg-7">
+
 					<div class="col-sm-12 col-md-12">
-						<h5 class="header-items">Lenovo K6 Note (K53a48) Grey </h5>
+						<h5 class="header-items">{{ iteam.title }}</h5>
 					</div>
 					<div class="col-sm-12 col-md-12">
-						<p class="description-items">Экран (5.5", IPS, 1920x1080)/ Qualcomm Snapdragon 430 (1.4 ГГц)/ основная камера: 16 Мп, фронтальная камера: 8 Мп/ RAM 3 ГБ/ 32 ГБ встроенной памяти + microSD/SDHC (до 128 ГБ)/ 3G/ LTE/ GPS/ поддержка 2х SIM-карт (Nano-SIM)/ Android 6.0 (Marshmallow) / 4000 мА*ч</p>
+						<p class="description-items">{{ iteam.description }}</p>
 					</div>
 					<div class="col-sm-4 col-md-12 col-lg-5">
-						<p class="status-items">Active</p>
+						<p class="status-items">{{ iteam.status }}</p>
 					</div>
+
 					<div class="col-md-12 ">
 						<button class="btn btn-default" type="submit">Взяти у прокат</button>
 						<button class="btn btn-default" type="submit">Вернути на склад</button>
 						<button class="btn btn-default" type="submit">Потребує ремонту</button>
 						<input class="btn btn-default" type="submit" value="Здати в ремонт">
 					</div>
+
 				</div>
+
+			</div>
+
 		</div>
-	</div>
-</section>
-
-
+	</section>
 {% endblock %}
 
 {% block extra_js %}
