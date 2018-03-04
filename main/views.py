@@ -3,6 +3,7 @@
 
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.contrib.auth.decorators import login_required
 
 from .models import Equipment, EquipmentLog, Status
 
@@ -19,6 +20,7 @@ def iteam_details(request, pk):
     return render(request, 'main/iteam_details.html', {'iteam': iteam})
 
 
+@login_required
 def logs(request):
     """Render page with logs."""
     logs = EquipmentLog.objects.all().order_by('-date')
