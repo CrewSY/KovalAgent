@@ -12,3 +12,7 @@
 	color: white;
 	font-size: 20px;
 }
+
+#ajax-progress-indicator {
+  display: none;
+}
