@@ -12,9 +12,17 @@
   margin: 0;
 }
 
-
-.test1 {
-  background-color: #C3EEB7;
+.green-row {
+  background-color: #D9FFB9;
+}
+.yellow-row {
+  background-color: #FFEDB9;
+}
+.gray-row {
+  background-color: #ECEEED;
+}
+.red-row {
+  background-color: #FFB9B9;
 }
 
 .test2 {
