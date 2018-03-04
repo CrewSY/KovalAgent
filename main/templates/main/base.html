@@ -22,7 +22,7 @@
         {% if user.is_authenticated %}
           <a class="btn btn-outline-secondary btn-log logout" href="{% url 'logout' %}">{% trans "Log out" %}</a>
         {% else %}
-          <a class="btn btn-outline-secondary btn-log login" id="login" href="{% url 'login' %}">{% trans "Sign in" %}</a>
+          <a class="btn btn-outline-secondary btn-log login" id="login" href="{% url 'login' %}">Логін</a>
         {% endif %}
       </div>
     </div>
