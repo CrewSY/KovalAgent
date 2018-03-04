@@ -52,12 +52,13 @@ class EquipmentLog(models.Model):
                                  verbose_name=u'Користувач')
     iteam = models.ForeignKey(Equipment,
                               verbose_name=u'Обладнання')
-    action = models.CharField(verbose_name=u'Заголовок',
-                              blank=True,
-                              max_length=64)
+    pre_status = models.CharField(verbose_name=u'Статус до',
+                                  max_length=24)
+    post_status = models.CharField(verbose_name=u'Статус після',
+                                   max_length=24)
     date = models.DateTimeField(verbose_name=u'Дата',
                                 default=timezone.now)
 
     def __str__(self):
         """Render the equipment log instance as a string."""
-        return '%s - %s' % (self.owner, self.action)
+        return self.id
