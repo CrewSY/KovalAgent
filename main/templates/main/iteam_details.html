@@ -14,11 +14,13 @@
 			<div class="row">
 
 				<div class="col-md-5 col-lg-5">
+  
 					{% if pr.photo %}
-            <img src="{{ iteam.photo.url }}">
+            <img  src="{{ iteam.photo.url }}">
           {% else %}
-                <img height="150" width="150" src="{% static "img/inventoryicon.png" %}">
+             <img class="photo-items" src="{% static "img/inventoryicon.png" %}">
           {% endif %}
+          
 				</div>
 
 				<div class="col-md-7 col-lg-7">
