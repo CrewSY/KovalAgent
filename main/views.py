@@ -21,7 +21,7 @@ def iteam_details(request, pk):
 
 def logs(request):
     """Render page with logs."""
-    logs = EquipmentLog.objects.all()
+    logs = EquipmentLog.objects.all().order_by('-date')
     return render(request, 'main/logs.html', {'logs': logs})
 
 
