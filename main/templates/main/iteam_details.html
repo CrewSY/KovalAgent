@@ -30,26 +30,17 @@
 						<p class="description-items">{{ iteam.description }}</p>
 					</div>
 					<div class="col-sm-4 col-md-12 col-lg-5">
-						{% if iteam.status.id == 1 %}
-							<p class="status-items">Доступний на складі</p>
-						{% endif %}
-						{% if iteam.status.id == 2 %}
-							<p class="status-items">У прокаті</p>
-						{% endif %}
-						{% if iteam.status.id == 3 %}
-							<p class="status-items">Потребує ремонту</p>
-						{% endif %}
-						{% if iteam.status.id == 4 %}
-							<p class="status-items">У ремонті</p>
-						{% endif %}
+						<span id="ajax-progress-indicator">Зачекайте, зберігається стан...</span>
+						<p id="iteam-status" class="status-items" data-status_id="{{ iteam.status.id }}">{{ iteam.status.name }}</p>
 					</div>
+						<div id="btns-status" class="col-md-12"  data-url="{% url 'change_status' %}" data-iteam_id = "{{ iteam.id }}"> {% csrf_token %}
 
-					<div id="btns-status" class="col-md-12"  data-url="{% url 'change_status' %}" data-iteam_id = "{{ iteam.id }}"> {% csrf_token %}
-								<button type="button" class="btn btn-default btn-status" data-post_status_id="{{ 2 }}">Взяти у прокат </button>
-						<button type="button" class="btn btn-default btn-status" data-post_status_id="{{ 1 }}">Вернути на склад </button>
-							<button type="button" class="btn btn-default btn-status" data-post_status_id="{{ 3 }}">Потребує ремонту </button>
-						<button type="button" class="btn btn-default btn-status" data-post_status_id="{{ 4 }}">Здати в ремонт </button>
-					</div>
+							<button type="button" id="btn2" class="btn btn-default btn-status change-icon" data-post_status_id="{{ 2 }}">Взяти у прокат</button>
+							<button type="button" id="btn1" class="btn btn-default btn-status change-icon" data-post_status_id="{{ 1 }}">Вернути на склад </button>
+							<button type="button" id="btn3" class="btn btn-default btn-status change-icon" data-post_status_id="{{ 3 }}">Потребує ремонту </button>
+							<button type="button" id="btn4" class="btn btn-default btn-status change-icon" data-post_status_id="{{ 4 }}">Здати в ремонт </button>
+
+						</div>
 
 				</div>
 
