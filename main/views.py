@@ -3,6 +3,7 @@
 
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.contrib.auth.decorators import login_required
 
 from .models import Equipment, EquipmentLog, Status
 
@@ -19,6 +20,7 @@ def iteam_details(request, pk):
     return render(request, 'main/iteam_details.html', {'iteam': iteam})
 
 
+@login_required
 def logs(request):
     """Render page with logs."""
     logs = EquipmentLog.objects.all().order_by('-date')
@@ -46,3 +48,15 @@ def change_status(request):
         iteam.save()
 
     return HttpResponse()
+
+
+def update_content(request, sort_by):
+    """Update content according value of sort_by."""
+    if sort_by == 'title':
+        iteams = Equipment.objects.all().order_by('title')
+    elif sort_by == 'status':
+        iteams = Equipment.objects.all().order_by('status__id')
+    else:
+        iteams = Equipment.objects.all()
+
+    return render(request, 'equipment_content.html', {'iteams': iteams})

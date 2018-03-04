@@ -1,6 +1,5 @@
 {% extends 'main/base.html' %}
 
-{% load i18n %}
 {% load staticfiles %}
 
 {% block extra_css %}
@@ -13,31 +12,23 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-3 offset-sm-5" id="group-selector">
-				<p class="sort-by">Cортувати за</p>
+				<p class="sort-by sort-by-js">Cортувати за</p>
 					<select>
-						<option value="За алфавітом">За алфавітом</option>
-						<option value="За статусом">За статусом</option>
+						<option class="sort-by-js" value="status">За статусом</option>
+						<option class="sort-by-js" value="title">За алфавітом</option>
 					</select>
 			</div>
 	 </div>
-		{% for iteam in iteams %}
-		<div class="row test">
-			<div class="col-sm-2 col-md-2 offset-md-2 offset-sm-2 test1">
-				<img class="photo-equipment" src="../../static/img/inventoryicon.png" alt="">
-			</div>
-			<div class="col-sm-4 col-md-4 test1">
-				<h6 class="header-equipment">{{ iteam.title }}</h6>
-			</div>
-			<div class="col-sm-3 col-md-2 test1 test2">
-				{{ iteam.status }}
-			</div>
-			<div class="col-sm-1 col-md-2"></div>
-		</div><hr class="hr-content">
-		{% endfor %}
+
+	 <div id="equipment_content">
+	    {% include 'equipment_content.html' %}
+   </div>
+
 
 	</div>
 </section>
 {% endblock %}
 
 {% block extra_js %}
+<script src="{% static "js/sort.js" %}"></script>
 {% endblock %}
