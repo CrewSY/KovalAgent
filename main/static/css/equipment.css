@@ -3,14 +3,38 @@
   width: 35px;
 }
 
-.test {
-  margin-top: 15px;
-}
-
 .header-equipment {
-  font-weight: 700;
+  font-size: 14px;
+  text-align: center;
 }
 
 .hr-content {
-  margin-top: 5px;
+  margin: 0;
 }
+
+
+.test1 {
+  background-color: #C3EEB7;
+}
+
+.test2 {
+  text-align: right;
+}
+
+.sort-by {
+  margin-bottom: 0;
+  margin-left: 10px;
+  color: #555555;
+}
+
+#group-selector select {
+  width: 55%;
+  background-color: #ffffff;
+  border:1px solid #cccccc;
+  height: 30px;
+  line-height: 30px;
+  color: #555555;
+  margin-bottom: 20px;
+}
+
+@media(min-width:0px) and (max-width: 320px) {

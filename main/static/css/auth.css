@@ -61,11 +61,13 @@ body {
   padding-top: 4vh;
 }
 
-p.error-message  {
+.error-message  {
   text-align: center !important;
   font-size: 20px;
   font-weight: bold;
   margin-top: -60px;
+  display: block;
+  margin: 0 auto;
 }
 
 .form .message {
