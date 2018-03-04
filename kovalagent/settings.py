@@ -63,9 +63,10 @@ WSGI_APPLICATION = 'kovalagent.wsgi.application'
 
 # Database
 
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'kovalagentdb',
         'USER': 'koval',
         'PASSWORD': '1234qwer',
