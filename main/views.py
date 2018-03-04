@@ -46,3 +46,15 @@ def change_status(request):
         iteam.save()
 
     return HttpResponse()
+
+
+def update_content(request, sort_by):
+    """Update content according value of sort_by."""
+    if sort_by == 'title':
+        iteams = Equipment.objects.all().order_by('title')
+    elif sort_by == 'status':
+        iteams = Equipment.objects.all().order_by('status__id')
+    else:
+        iteams = Equipment.objects.all()
+
+    return render(request, 'equipment_content.html', {'iteams': iteams})
