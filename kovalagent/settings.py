@@ -15,8 +15,7 @@ SECRET_KEY = '3-!x1e-yd75exuvrgcs7r&pxj7jgi15v0=^wj9a0k@h6#!mdb!'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['127.0.0.1', 'kovalagent.herokuapp.com']
 
 # Application definition
 
@@ -113,6 +112,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 LOGIN_REDIRECT_URL = '/'
 REGISTRATION_AUTO_LOGIN = True
