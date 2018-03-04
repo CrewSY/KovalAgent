@@ -34,12 +34,10 @@ class Equipment(models.Model):
                              blank=True,
                              max_length=64)
     description = models.TextField(verbose_name=u'Опис', blank=True)
-    created = models.DateTimeField(auto_now_add=True, auto_now=False)
-    updated = models.DateTimeField(auto_now_add=False, auto_now=True)
 
     def __str__(self):
         """Render the equipment instance as a string."""
-        return '%s - %s' % (self.title, self.status)
+        return '%s' % self.title
 
 
 class EquipmentLog(models.Model):
@@ -64,4 +62,4 @@ class EquipmentLog(models.Model):
 
     def __str__(self):
         """Render the equipment log instance as a string."""
-        return self.id
+        return '%s' % self.id
