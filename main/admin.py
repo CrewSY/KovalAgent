@@ -2,7 +2,7 @@
 
 from django.contrib import admin
 
-from .models import Equipment
+from .models import Equipment, EquipmentLog
 
 
 class EquipmentAdmin(admin.ModelAdmin):
@@ -19,3 +19,4 @@ class EquipmentAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Equipment, EquipmentAdmin)
+admin.site.register(EquipmentLog)
