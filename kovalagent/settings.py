@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'main',
+    'registration',
 ]
 
 MIDDLEWARE = [
@@ -62,12 +63,15 @@ WSGI_APPLICATION = 'kovalagent.wsgi.application'
 
 
 # Database
-# https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'kovalagentdb',
+        'USER': 'koval',
+        'PASSWORD': '1234qwer',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
 
@@ -109,3 +113,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+
+LOGIN_REDIRECT_URL = '/'
+REGISTRATION_AUTO_LOGIN = True
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, '..', 'media')
