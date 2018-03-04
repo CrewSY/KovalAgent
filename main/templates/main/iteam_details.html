@@ -31,12 +31,14 @@
 					<div class="col-sm-12 col-md-12">
 						<p class="description-items">{{ iteam.description }}</p>
 					</div>
-					<div class="col-sm-4 col-md-12 col-lg-5">
+					<div class="col-sm-6 col-md-12 col-lg-5">
 						<span id="ajax-progress-indicator">Зачекайте, зберігається стан...</span>
 						<p id="iteam-status" class="status-items" data-status_id="{{ iteam.status.id }}">{{ iteam.status.name }}</p>
 					</div>
+
 						<div id="btns-status" class="col-md-12"  data-url="{% url 'change_status' %}" data-iteam_id = "{{ iteam.id }}"> {% csrf_token %}
 						{% if user.is_authenticated %}
+
 							<button type="button" id="btn2" class="btn btn-default btn-status change-icon" data-post_status_id="{{ 2 }}">Взяти у прокат</button>
 							<button type="button" id="btn1" class="btn btn-default btn-status change-icon" data-post_status_id="{{ 1 }}">Вернути на склад </button>
 							<button type="button" id="btn3" class="btn btn-default btn-status change-icon" data-post_status_id="{{ 3 }}">Потребує ремонту </button>

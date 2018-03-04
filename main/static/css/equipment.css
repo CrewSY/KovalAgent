@@ -1,11 +1,13 @@
 .photo-equipment {
   height: 35px;
   width: 35px;
+  position: relative;
 }
 
 .header-equipment {
   font-size: 14px;
   text-align: center;
+  margin-top: 10px;
 }
 
 .hr-content {
@@ -36,7 +38,7 @@
 }
 
 #group-selector select {
-  width: 55%;
+  width: 130px;
   background-color: #ffffff;
   border:1px solid #cccccc;
   height: 30px;
@@ -45,4 +47,19 @@
   margin-bottom: 20px;
 }
 
-@media(min-width:0px) and (max-width: 320px) {
+.hr-content {
+  margin-bottom: 1px;
+}
+
+@media(min-width:0px) and (max-width: 575px) {
+  .test2 {
+    float: center;
+    text-align: center;
+  }
+
+  .photo-equipment {
+    display: block;
+    margin: 0 auto;
+    margin-top: 3px;
+  }
+}

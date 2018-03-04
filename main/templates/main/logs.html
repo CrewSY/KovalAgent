@@ -1,0 +1,46 @@
+{% extends "main/base.html" %}
+
+{% load i18n %}
+{% load staticfiles %}
+
+{% block extra_css %}
+  <link rel="stylesheet" href="{% static "css/logs.css" %}">
+{% endblock %}
+
+{% block content %}
+
+<table>
+  <thead>
+    <tr>
+      <th>Користувач</th>
+      <th>Предмет</th>
+      <th>Стан до</th>
+      <th>Стан після</th>
+      <th>Дата</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-label="user">drtgds fghytrssdf</td>
+      <td data-label="item">Тестове обладнання №6</td>
+      <td data-label="before">У ремонті</td>
+      <td data-label="after">Потребує ремонту</td>
+      <td data-label="period">01/31/2015</td>
+    </tr>
+    <tr>
+      <td data-label="user">drtgds fghytrssdf</td>
+      <td data-label="item">Тестове обладнання №6</td>
+      <td data-label="before">У ремонті</td>
+      <td data-label="after">Потребує ремонту</td>
+      <td data-label="period">01/31/2015</td>
+    </tr>
+    <tr>
+      <td data-label="user">drtgds fghytrssdf</td>
+      <td data-label="item">Тестове обладнання №6</td>
+      <td data-label="before">У ремонті</td>
+      <td data-label="after">Потребує ремонту</td>
+      <td data-label="period">01/31/2015</td>
+    </tr>
+  </tbody>
+</table>
+{% endblock %}
