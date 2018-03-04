@@ -22,6 +22,9 @@ class Equipment(models.Model):
         ('under_repair', u'У ремонті',)
     )
 
+    photo = models.ImageField(verbose_name=u'Фото',
+                              blank=True,
+                              null=True)
     status = models.CharField(verbose_name=u'Статус',
                               max_length=24,
                               choices=STATUS_CHOICES,
