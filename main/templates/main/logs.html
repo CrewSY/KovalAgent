@@ -20,27 +20,19 @@
     </tr>
   </thead>
   <tbody>
+    {% for log in logs %}
     <tr>
-      <td data-label="user">drtgds fghytrssdf</td>
-      <td data-label="item">Тестове обладнання №6</td>
-      <td data-label="before">У ремонті</td>
-      <td data-label="after">Потребує ремонту</td>
-      <td data-label="period">01/31/2015</td>
+      {% if log.owner.first_name and log.owner.last_name %}
+        <td data-label="Користувач">{{ log.owner.first_name }} {{ log.owner.last_name }}</td>
+      {% else %}
+        <td data-label="Користувач">{{ log.owner.username }}</td>
+      {% endif%}
+      <td data-label="Обладнання">{{ log.iteam }}</td>
+      <td data-label="Стан до">{{ log.pre_status }}</td>
+      <td data-label="Стан після">{{ log.post_status }}</td>
+      <td data-label="Дата">{{ log.date }}</td>
     </tr>
-    <tr>
-      <td data-label="user">drtgds fghytrssdf</td>
-      <td data-label="item">Тестове обладнання №6</td>
-      <td data-label="before">У ремонті</td>
-      <td data-label="after">Потребує ремонту</td>
-      <td data-label="period">01/31/2015</td>
-    </tr>
-    <tr>
-      <td data-label="user">drtgds fghytrssdf</td>
-      <td data-label="item">Тестове обладнання №6</td>
-      <td data-label="before">У ремонті</td>
-      <td data-label="after">Потребує ремонту</td>
-      <td data-label="period">01/31/2015</td>
-    </tr>
+    {% endfor %}
   </tbody>
 </table>
 {% endblock %}

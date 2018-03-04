@@ -1,88 +1,46 @@
 {% load staticfiles %}
 
-{% for iteam in iteams %}
-  {% if iteam.status.id == 1 %}
-  <div class="row test">
-    <div class="col-sm-2 col-md-2 offset-md-2 offset-sm-2 green-row">
-      {% if pr.photo %}
-        <img class="photo-equipment"  src="{{ iteam.photo.url }}">
-      {% else %}
-        <img class="photo-equipment" src="{% static "img/inventoryicon.png" %}">
-      {% endif %}
-    </div>
-    <div class="col-sm-4 col-md-4 green-row">
-      <a href="{% url 'iteam_details' pk=iteam.id %}">
-      <h6 class="header-equipment">{{ iteam.title }}</h6>
-    </a>
-    </div>
-    <div class="col-sm-2 col-md-2 green-row test2">
-      {{ iteam.status }}
-    </div>
-    <div class="col-sm-2 col-md-2"></div>
-  </div><hr class="hr-content">
-  {% endif %}
-
-{% if iteam.status.id == 2 %}
-  <div class="row test">
-    <div class="col-sm-2 col-md-2 offset-md-2 offset-sm-2 gray-row">
-      {% if pr.photo %}
-        <img class="photo-equipment"  src="{{ iteam.photo.url }}">
-      {% else %}
-        <img class="photo-equipment" src="{% static "img/inventoryicon.png" %}">
-      {% endif %}
-    </div>
-    <div class="col-sm-4 col-md-4 gray-row">
-      <a href="{% url 'iteam_details' pk=iteam.id %}">
-      <h6 class="header-equipment">{{ iteam.title }}</h6>
-    </a>
-    </div>
-    <div class="col-sm-2 col-md-2 gray-row test2">
-      {{ iteam.status }}
-    </div>
-    <div class="col-sm-2 col-md-2"></div>
-  </div><hr class="hr-content">
-  {% endif %}
-
-{% if iteam.status.id == 3 %}
-  <div class="row test">
-    <div class="col-sm-2 col-md-2 offset-md-2 offset-sm-2 yellow-row">
-      {% if pr.photo %}
-        <img class="photo-equipment"  src="{{ iteam.photo.url }}">
-      {% else %}
-        <img class="photo-equipment" src="{% static "img/inventoryicon.png" %}">
-      {% endif %}
-    </div>
-    <div class="col-sm-4 col-md-4 yellow-row">
-      <a href="{% url 'iteam_details' pk=iteam.id %}">
-      <h6 class="header-equipment">{{ iteam.title }}</h6>
-    </a>
-    </div>
-    <div class="col-sm-2 col-md-2 yellow-row test2">
-      {{ iteam.status }}
-    </div>
-    <div class="col-sm-2 col-md-2"></div>
-  </div><hr class="hr-content">
-  {% endif %}
-
-{% if iteam.status.id == 4 %}
-  <div class="row test">
-    <div class="col-sm-2 col-md-2 offset-md-2 offset-sm-2 red-row">
-      {% if pr.photo %}
-        <img class="photo-equipment"  src="{{ iteam.photo.url }}">
-      {% else %}
-        <img class="photo-equipment" src="{% static "img/inventoryicon.png" %}">
-      {% endif %}
-    </div>
-    <div class="col-sm-4 col-md-4 red-row">
-      <a href="{% url 'iteam_details' pk=iteam.id %}">
-      <h6 class="header-equipment">{{ iteam.title }}</h6>
-    </a>
-    </div>
-    <div class="col-sm-2 col-md-2 red-row test2">
-      {{ iteam.status }}
-    </div>
-    <div class="col-sm-2 col-md-2"></div>
-  </div><hr class="hr-content">
-  {% endif %}
-
-{% endfor %}
+  <table>
+  <thead>
+    <tr>
+      <th>Назва</th>
+      <th>Стан</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for iteam in iteams %}
+    {% if iteam.status.id == 1 %}
+    <tr class="green-row">
+      <td data-label="Назва">
+          <a href="{% url 'iteam_details' pk=iteam.id %}">{{ iteam.title }}</a>
+        </td>
+      <td data-label="Статус">{{ iteam.status }}</td>
+    </tr>
+    {% endif %}
+    {% if iteam.status.id == 2 %}
+    <tr class="gray-row">
+        <td data-label="Назва">
+          <a href="{% url 'iteam_details' pk=iteam.id %}">{{ iteam.title }}</a>
+        </td>
+      <td data-label="Статус">{{ iteam.status }}</td>
+    </tr>
+    {% endif %}
+    {% if iteam.status.id == 3 %}
+    <tr class="yellow-row">
+      <td data-label="Назва">
+          <a href="{% url 'iteam_details' pk=iteam.id %}">{{ iteam.title }}</a>
+        </td>
+      <td data-label="Статус">{{ iteam.status }}</td>
+    </tr>
+    {% endif %}
+    {% if iteam.status.id == 4 %}
+    <tr class="red-row">
+      <td data-label="Назва">
+          <a href="{% url 'iteam_details' pk=iteam.id %}">{{ iteam.title }}</a>
+        </td>
+      <td data-label="Статус">{{ iteam.status }}</td>
+    </tr>
+    {% endif %}
+    {% endfor %}
+  </tbody>
+</table>
