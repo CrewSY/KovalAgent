@@ -8,8 +8,8 @@ body {
 }
 
 header {
-	height: 50px;
-	background-color: grey;
+	height: auto;
+	background-color: yellow;
 }
 
 #footer {
