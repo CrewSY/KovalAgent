@@ -19,6 +19,12 @@ def iteam_details(request, pk):
     return render(request, 'main/iteam_details.html', {'iteam': iteam})
 
 
+def logs(request):
+    """Render page with logs."""
+    logs = EquipmentLog.objects.all()
+    return render(request, 'main/logs.html', {'logs': logs})
+
+
 def change_status(request):
     """Change status and create log object for this action."""
     user = request.user
