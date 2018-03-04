@@ -6,7 +6,9 @@
       <img class="photo-equipment" src="../../static/img/inventoryicon.png" alt="">
     </div>
     <div class="col-sm-4 col-md-4 test1">
+      <a href="{% url 'iteam_details' pk=iteam.id %}">
       <h6 class="header-equipment">{{ iteam.title }}</h6>
+    </a>
     </div>
     <div class="col-sm-2 col-md-2 test1 test2">
       {{ iteam.status }}
