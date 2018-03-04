@@ -4,31 +4,43 @@
 {% load staticfiles %}
 
 {% block extra_css %}
-  <link rel="stylesheet" href="{% static "css/auth.css" %}">
+  <link rel="stylesheet" href="{% static "css/logs.css" %}">
 {% endblock %}
 
 {% block content %}
 
-  <div class="login-div">
-    <div class="container">
-      <div class="row">
-        {% if form.errors %}
-        <div class="col-sm-8 offset-sm-2 col-md-8 offset-md-2">
-          <div class="error-message"><p>Неправильний логін або пароль. Спробуйте ще раз.</div>
-        </div>
-        {% endif %}
-        <div class=" col-md-6 offset-md-3">
-          <div class="form">
-            <form class="login-form" method="post" action="{% url 'login' %}">
-              {% csrf_token %}
-              <input type="text" placeholder="Логін" name="username"/>
-              <input type="password"  placeholder="Пароль" name="password" />
-              <button type="submit" value="login">Логін</button>
-              <input type="hidden" name="next" value="{{ next }}" />
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+<table>
+  <thead>
+    <tr>
+      <th>Користувач</th>
+      <th>Предмет</th>
+      <th>Стан до</th>
+      <th>Стан після</th>
+      <th>Дата</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-label="user">drtgds fghytrssdf</td>
+      <td data-label="item">Тестове обладнання №6</td>
+      <td data-label="before">У ремонті</td>
+      <td data-label="after">Потребує ремонту</td>
+      <td data-label="period">01/31/2015</td>
+    </tr>
+    <tr>
+      <td data-label="user">drtgds fghytrssdf</td>
+      <td data-label="item">Тестове обладнання №6</td>
+      <td data-label="before">У ремонті</td>
+      <td data-label="after">Потребує ремонту</td>
+      <td data-label="period">01/31/2015</td>
+    </tr>
+    <tr>
+      <td data-label="user">drtgds fghytrssdf</td>
+      <td data-label="item">Тестове обладнання №6</td>
+      <td data-label="before">У ремонті</td>
+      <td data-label="after">Потребує ремонту</td>
+      <td data-label="period">01/31/2015</td>
+    </tr>
+  </tbody>
+</table>
 {% endblock %}
