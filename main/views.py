@@ -2,6 +2,8 @@
 """Views for main app of PowerSocket project."""
 
 from django.shortcuts import render
+from django.conf import settings
+from django.utils import dateformat
 from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
 
@@ -24,6 +26,8 @@ def iteam_details(request, pk):
 def logs(request):
     """Render page with logs."""
     logs = EquipmentLog.objects.all().order_by('-date')
+    for log in logs:
+        log.date = dateformat.format(log.date, settings.DATE_FORMAT)
     return render(request, 'main/logs.html', {'logs': logs})
 
 
