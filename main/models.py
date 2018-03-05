@@ -40,7 +40,8 @@ class Equipment(models.Model):
     title = models.CharField(verbose_name='Заголовок',
                              blank=True,
                              max_length=64)
-    description = models.TextField(verbose_name=u'Опис', blank=True)
+    description = models.TextField(verbose_name=u'Опис',
+                                   blank=True)
 
     def __str__(self):
         """Render the equipment instance as a string."""
