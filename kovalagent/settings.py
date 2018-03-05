@@ -16,7 +16,7 @@ SECRET_KEY = '3-!x1e-yd75exuvrgcs7r&pxj7jgi15v0=^wj9a0k@h6#!mdb!'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', '.herokuapp.com']
 
@@ -101,22 +101,22 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'uk-UK'
+DATE_FORMAT = 'd/m/y G:i'
 
 TIME_ZONE = 'Europe/Kiev'
 
 USE_I18N = True
 
-USE_L10N = True
+USE_L10N = False
 
-USE_TZ = True
-
+USE_TZ = False
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(REPOSITORY_ROOT, 'static/')
 
 LOGIN_REDIRECT_URL = '/'
 REGISTRATION_AUTO_LOGIN = True
