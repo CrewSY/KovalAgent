@@ -4,7 +4,7 @@
 from django.shortcuts import render
 from django.conf import settings
 from django.utils import dateformat
-from django.http import HttpResponse
+from django.http import JsonResponse
 from django.contrib.auth.decorators import login_required
 
 from .models import Equipment, EquipmentLog, Status
@@ -39,9 +39,16 @@ def change_status(request):
     if user.is_authenticated():
         iteam_id = data.get('iteam_id')
         post_status_id = data.get('post_status_id')
+        try:
+            iteam = Equipment.objects.get(id=iteam_id)
+            post_status = Status.objects.get(id=post_status_id)
+        except Equipment.DoesNotExist:
+            iteam = None
+            return JsonResponse({'status': 'failed'})
+        except Status.DoesNotExist:
+            post_status = None
+            return JsonResponse({'status': 'failed'})
 
-        iteam = Equipment.objects.get(id=iteam_id)
-        post_status = Status.objects.get(id=post_status_id)
         pre_status = iteam.status.name
 
         EquipmentLog.objects.create(owner=user,
@@ -51,7 +58,7 @@ def change_status(request):
         iteam.status = post_status
         iteam.save()
 
-    return HttpResponse()
+    return JsonResponse({'status': 'success'})
 
 
 def update_content(request, sort_by):

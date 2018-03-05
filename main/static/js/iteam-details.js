@@ -30,8 +30,16 @@ function statusUpdating(iteam_id, url, post_status_id){
         'beforeSend': function(xhr, settings){
             indicator.show();
         },
+        'error': function(xhr, status, error){
+            alert(error);
+            indicator.hide();
+        },
         'success': function(data, status, xhr){
             indicator.hide();
+            if (status != 'success') {
+                alert('Помилка на сервері. Спробуйте будь-ласка пізніше.');
+
+            }
             location.reload();
         }
     });
@@ -44,6 +52,7 @@ function changeIcons() {
     button.prop("disabled", "disabled");
   });
 }
+
 
 function initDisabledButton(){
     var id = $('#iteam-status').data("status_id");

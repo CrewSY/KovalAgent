@@ -34,7 +34,10 @@ class EquipmentLogAdmin(admin.ModelAdmin):
                     'post_status',
                     'date',
                     )
-    list_filter = ('owner', 'pre_status', 'post_status', )
+    list_filter = ('owner',
+                   'pre_status',
+                   'post_status',
+                   )
     search_fields = ('owner',
                      'owner.user__first_name',
                      'owner.user__last_name',
